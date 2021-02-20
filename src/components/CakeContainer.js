@@ -25,6 +25,7 @@ const mapDispatchToProps = dispatch => {
         buyCake: () => dispatch(buyCake())
     }
 }
+//connects react component to redux store
 export default connect(mapStateToProps, mapDispatchToProps)(CakeContainer);
 
 
