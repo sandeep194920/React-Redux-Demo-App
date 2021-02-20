@@ -1,12 +1,16 @@
 import logo from './logo.svg';
 import './App.css';
+import { Provider } from 'react-redux'; // component to provide redux to our react application
 import CakeContainer from './components/CakeContainer';
+import store from './redux/cake/store'; // Provider has to know about our store
 
 function App() {
   return (
-    <div className="App">
-      <CakeContainer />
-    </div>
+    <Provider store={store}>
+      <div className="App">
+        <CakeContainer />
+      </div>
+    </Provider>
   );
 }
 
