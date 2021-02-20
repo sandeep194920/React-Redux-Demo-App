@@ -11,3 +11,11 @@ function App() {
 }
 
 export default App;
+
+// Notes:
+
+/*
+1. There is no right way for the folder structure of react-redux projects. You can use whatever makes sense to you.
+2. I've created folders by features inside redux folder
+
+*/
