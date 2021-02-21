@@ -1,7 +1,8 @@
-import { createStore } from 'redux'
+import { createStore, applyMiddleware } from 'redux'
 import rootReducer from './rootReducer'
+import logger from 'redux-logger'
 
-
-const store = createStore(rootReducer);
+// adding this logger to the middleware logs onto the browser's console
+const store = createStore(rootReducer, applyMiddleware(logger));
 
 export default store;
