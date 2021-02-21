@@ -10,7 +10,7 @@ function HooksCakeContainer() {
 
     // useSelector receives an function argument called selector function. 
     // This selector function receives the redux state as the argument and can return a value (just like mapStateToProps)
-    const numOfCakes = useSelector(state => state.numOfCakes);
+    const numOfCakes = useSelector(state => state.cake.numOfCakes);
 
     // useDispatch hook returns a reference to the dispatch function from the redux store 
     const dispatch = useDispatch() // can be used to dispatch actions as needed

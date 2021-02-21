@@ -15,7 +15,7 @@ function CakeContainer(props) {
 // maps redux state to our component's props. In addition to the props this component was receiving, it will now receive this prop, numOfCakes as well 
 const mapStateToProps = state => {
     return {
-        numOfCakes: state.numOfCakes
+        numOfCakes: state.cake.numOfCakes
     }
 }
 // gets redux's dispatch method as parameter and returns an object

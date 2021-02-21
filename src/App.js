@@ -2,8 +2,9 @@ import logo from './logo.svg';
 import './App.css';
 import { Provider } from 'react-redux'; // component to provide redux to our react application
 import CakeContainer from './components/CakeContainer';
-import store from './redux/cake/store'; // Provider has to know about our store
+import store from './redux/store'; // Provider has to know about our store
 import HooksCakeContainer from './components/HooksCakeContainer';
+import IceCreamContainer from './components/IceCreamContainer';
 
 
 function App() {
@@ -12,6 +13,7 @@ function App() {
       <div className="App">
         <HooksCakeContainer />
         <CakeContainer />
+        <IceCreamContainer />
       </div>
     </Provider>
   );
