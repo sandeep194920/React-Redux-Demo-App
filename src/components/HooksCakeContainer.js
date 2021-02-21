@@ -3,7 +3,8 @@ import React from 'react'
 
 
 // useSelector hook is the close equivalent to the mapStateToProps function
-import { useSelector } from 'react-redux'
+import { useSelector, useDispatch } from 'react-redux'
+import { buyCake } from '../redux';
 
 function HooksCakeContainer() {
 
@@ -11,10 +12,16 @@ function HooksCakeContainer() {
     // This selector function receives the redux state as the argument and can return a value (just like mapStateToProps)
     const numOfCakes = useSelector(state => state.numOfCakes);
 
+    // useDispatch hook returns a reference to the dispatch function from the redux store 
+    const dispatch = useDispatch() // can be used to dispatch actions as needed
+
+    // for sure, we got rid of connect hoc by using useDispatch and useSelector but there are few usage warnings 
+    // given in the documentation, please refer that before writing the hooks code instead of connect hoc
+
     return (
         <div>
             <h2>Number of Cakes - {numOfCakes} </h2>
-            <button>Buy Cake</button>
+            <button onClick={() => dispatch(buyCake())}>Buy Cake</button>
         </div>
     )
 }
